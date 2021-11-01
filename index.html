@@ -3,14 +3,106 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello Clone App</title>
     <link rel="stylesheet" href="./assets/style/style.css">
-    <title>Document</title>
 </head>
 
 <body>
-
+    <div class="trello-container">
+        <ul class="drag-container">
+            <!--Backlog Container, Backlog Column, Add Button Group-->
+            <!--Adding Show/Hide On Inputs-->
+            <!--Enabling All JS Function On Each Position 0,1,2,3-->
+            <li class="drag-column backlog-column">
+                <span class="header">
+                    <p class="title">Backlog Task</p>
+                </span>
+                <div id="backlog-content">
+                    <ul class="drag-item-list" id="backlog-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
+                        ondragenter="dragEnterOn(0)"></ul>
+                </div>
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(0)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn save" onclick="hideInputBox(0)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+            <li class="drag-column progress-column">
+                <span class="header">
+                    <p class="title">In Progress Tasks</p>
+                </span>
+                <div id="progress-content">
+                    <ul class="drag-item-list" id="progress-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
+                        ondragenter="dragEnterOn(1)"></ul>
+                </div>
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(1)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn save" onclick="hideInputBox(1)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+            <li class="drag-column complete-column">
+                <span class="header">
+                    <p class="title">Completed Tasks</p>
+                </span>
+                <div id="complete-content">
+                    <ul class="drag-item-list" id="complete-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
+                        ondragenter="dragEnterOn(2)"></ul>
+                </div>
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(2)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn save" onclick="hideInputBox(2)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+            <li class="drag-column on-hold-column">
+                <span class="header">
+                    <p class="title">On Hold Tasks</p>
+                </span>
+                <div id="on-hold-content">
+                    <ul class="drag-item-list" id="on-hold-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
+                        ondragenter="dragEnterOn(3)"></ul>
+                </div>
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(3)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn save" onclick="hideInputBox(3)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="./assets/scripts/app.js"></script>
+    <script src="./assets/scripts/inputBoxes.js"></script>
+    <script src="./assets/scripts/items.js"></script>
 </body>
 
 </html>
