@@ -17,6 +17,8 @@ body {
 }
 
 .name {
+  font-size: 24px;
+  text-transform: uppercase;
   letter-spacing: 6px;
   text-align: center;
   font-weight: 700;
@@ -108,7 +110,7 @@ ul {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: rgba(187, 187, 187, 0.8);
+  background-color: #fdfdfd;
   border-radius: 10px;
   line-height: 24px;
   letter-spacing: 1px;
@@ -121,8 +123,12 @@ ul {
 
 .drag-item:focus {
   outline: none;
-  background-color: white;
-  color: black;
+  background-color: #FEFEFE;
+  color: #000000;
+}
+
+.drag-item:hover {
+  background-color: #ebe9e9;
 }
 
 .add-btn {
@@ -139,12 +145,13 @@ ul {
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background-color: #fdfdfd;
 }
 
 .add-btn-group {
@@ -157,8 +164,7 @@ ul {
 }
 
 .add-btn:hover {
-  background-color: #b3b3b3;
-  color: black;
+  background-color: #ebe9e9;
 }
 
 .add-btn:active {
@@ -168,14 +174,16 @@ ul {
 
 .save {
   display: none;
+  background-color: #fdfdfd;
 }
 
 .save:hover {
-  -webkit-transition: unset;
-  transition: unset;
-  -webkit-filter: brightness(95%);
-          filter: brightness(95%);
-  color: lightgray;
+  background-color: #ebe9e9;
+}
+
+.save:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .add-container {
@@ -190,11 +198,11 @@ ul {
   width: 100%;
   min-height: 100px;
   height: auto;
-  background-color: white;
+  background-color: #FEFEFE;
   border-radius: 10px;
   margin: 5px auto;
   resize: none;
-  color: black;
+  color: #000000;
   padding: 10px;
 }
 

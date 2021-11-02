@@ -22,6 +22,8 @@ body {
 }
 
 .name {
+  font-size: 24px;
+  text-transform: uppercase;
   letter-spacing: 6px;
   text-align: center;
   font-weight: $firstWeight;
@@ -47,11 +49,11 @@ body {
   position: relative;
   flex: 1;
   margin: 0 12px;
-  border-radius: 10px;
-  background-color: rgba(190, 190, 190, 0.4);
+  border-radius: $common;
+  background-color: $dragColumnBackground;
   overflow-x: hidden;
   @include breakpoint() {
-    margin: 10px;
+    margin: $common;
   }
 }
 
@@ -59,19 +61,19 @@ body {
 .header {
   display: flex;
   justify-content: center;
-  border-radius: 10px;
-  margin: 10px;
+  border-radius: $common;
+  margin: $common;
   &.backlog {
-    background-color: #FFFFF0;
+    background-color: $backlogBackground;
   }
   &.progress {
-    background-color: #ffb347;
+    background-color: $progressBackground;
   }
   &.completed {
-    background-color: #50C878;
+    background-color: $completedBackground;
   }
   &.hold {
-    background-color: #DC143C;
+    background-color: $holdBackground;
   }
   .title {
     text-align: center;
@@ -87,11 +89,11 @@ ul {
 }
 
 .drag-item {
-  margin: 10px;
-  padding: 10px;
+  margin: $common;
+  padding: $common;
   height: fit-content;
-  background-color: rgba(187, 187, 187, 0.8);
-  border-radius: 10px;
+  background-color: $dragItemBackground;
+  border-radius: $common;
   line-height: 24px;
   letter-spacing: 1px;
   cursor: pointer;
@@ -100,30 +102,33 @@ ul {
   }
   &:focus {
     outline: none;
-    background-color: white;
-    color: black;
+    background-color: $basicWhite;
+    color: $basicBlack;
+  }
+  &:hover {
+    background-color: $hoverItem;
   }
 }
 
 //Button Section Container
 
 .add-btn {
-  margin: 10px;
-  padding: 5px 10px;
+  margin: $common;
+  padding: $small $common;
   display: flex;
   align-items: center;
   cursor: pointer;
   width: fit-content;
-  border-radius: 5px;
-  transition: all 0.3s ease-in;
+  border-radius: $small;
+  transition: all 0.1s ease-in;
   user-select: none;
+  background-color: $dragItemBackground;
   &-group {
     display: flex;
     justify-content: space-between;
   }
   &:hover {
-    background-color: rgb(179, 179, 179);
-    color: black;
+    background-color: $hoverItem;
   }
   &:active {
     transform: scale(0.95);
@@ -132,32 +137,33 @@ ul {
 
 .save {
   display: none;
+  background-color: $dragItemBackground;
   &:hover {
-    transition: unset;
-    filter: brightness(95%);
-    color: lightgray;
+    background-color: $hoverItem;
+  }
+  &:active {
+    transform: scale(0.95);
   }
 }
 
 //Add Content Container
 
 .add-container {
-  margin: 10px;
-  padding: 5px 10px;
-  border-radius: 10px;
-  // background-color: rgba(255, 255, 255, 0.9);
+  margin: $common;
+  padding: $small $common;
+  border-radius: $common;
   min-height: 100px;
   display: none;
   .add-item {
     width: 100%;
     min-height: 100px;
     height: auto;
-    background-color: white;
-    border-radius: 10px;
-    margin: 5px auto;
+    background-color: $basicWhite;
+    border-radius: $common;
+    margin: $small auto;
     resize: none;
-    color: black;
-    padding: 10px;
+    color: $basicBlack;
+    padding: $common;
     &:focus {
       outline: none;
     }

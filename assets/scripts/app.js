@@ -37,6 +37,6 @@ let onHoldArray = [];backlogArray
 let listArrays = [];
 
 //Drag & Drop Functionality
-let draggedItem;completeArray
+let draggedItem;
 let dragging = false;
 let currentColumn;

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="./assets/media/favicon.ico">
     <title>Trello Clone App</title>
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
@@ -24,7 +25,7 @@
                 </span>
                 <div id="backlog-content">
                     <ul class="drag-item-list" id="backlog-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
-                        ondragenter="dragEnterOn(0)" ondragleave="dragLeave(event)"></ul>
+                        ondragenter="dragEnterOn(0)" ondragleave="dragLeave(event)" draggable="true"></ul>
                 </div>
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(0)">
