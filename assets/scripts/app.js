@@ -17,6 +17,7 @@ const addButtons = getSelectorAll('.add-btn');
 const itemSaveButton = getSelectorAll('.save');
 const itemAddContainer = getSelectorAll('.add-container');
 const addItems = getSelectorAll('.add-item');
+const containers = getSelectorAll('.drag-container');
 
 //Item Lists
 const listColumns = getSelectorAll('.drag-item-list');
