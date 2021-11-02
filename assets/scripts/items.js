@@ -155,6 +155,10 @@ function dragEnterOn(column) {
   currentColumn = column;
 }
 
+function dragLeave(e) {
+  draggedItem.style.color = 'red';
+}
+
 function drag(e) {
   draggedItem = e.target;
   dragging = true;

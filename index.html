@@ -20,7 +20,7 @@
                 </span>
                 <div id="backlog-content">
                     <ul class="drag-item-list" id="backlog-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
-                        ondragenter="dragEnterOn(0)"></ul>
+                        ondragenter="dragEnterOn(0)" ondragleave="dragLeave(event)"></ul>
                 </div>
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(0)">
@@ -41,7 +41,7 @@
                 </span>
                 <div id="progress-content">
                     <ul class="drag-item-list" id="progress-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
-                        ondragenter="dragEnterOn(1)"></ul>
+                        ondragenter="dragEnterOn(1)" ondragleave="dragLeave(event)"></ul>
                 </div>
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(1)">
@@ -62,7 +62,7 @@
                 </span>
                 <div id="complete-content">
                     <ul class="drag-item-list" id="complete-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
-                        ondragenter="dragEnterOn(2)"></ul>
+                        ondragenter="dragEnterOn(2)" ondragleave="dragLeave(event)"></ul>
                 </div>
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(2)">
@@ -83,7 +83,7 @@
                 </span>
                 <div id="on-hold-content">
                     <ul class="drag-item-list" id="on-hold-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
-                        ondragenter="dragEnterOn(3)"></ul>
+                        ondragenter="dragEnterOn(3)" ondragleave="dragLeave(event)"></ul>
                 </div>
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(3)">
