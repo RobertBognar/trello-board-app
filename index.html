@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,700&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image" href="./assets/media/favicon.ico">
     <title>Trello Clone App</title>
     <link rel="stylesheet" href="./assets/style/style.css">
@@ -24,8 +25,9 @@
                     <p class="title">Backlog 📝</p>
                 </span>
                 <div id="backlog-content">
-                    <ul class="drag-item-list" id="backlog-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
-                        ondragenter="dragEnterOn(0)" ondragleave="dragLeave(event)"></ul>
+                    <ul class="drag-item-list" id="backlog-list" ondrop="dropItemTo(event)"
+                        ondragover="allowDropTo(event)" ondragenter="dragEnterOn(0)" ondragleave="dragLeave(event)">
+                    </ul>
                 </div>
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(0)">
@@ -44,8 +46,9 @@
                     <p class="title">In Progress 🔄</p>
                 </span>
                 <div id="progress-content">
-                    <ul class="drag-item-list" id="progress-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
-                        ondragenter="dragEnterOn(1)" ondragleave="dragLeave(event)"></ul>
+                    <ul class="drag-item-list" id="progress-list" ondrop="dropItemTo(event)"
+                        ondragover="allowDropTo(event)" ondragenter="dragEnterOn(1)" ondragleave="dragLeave(event)">
+                    </ul>
                 </div>
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(1)">
@@ -64,8 +67,9 @@
                     <p class="title">Completed ✔️</p>
                 </span>
                 <div id="complete-content">
-                    <ul class="drag-item-list" id="complete-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
-                        ondragenter="dragEnterOn(2)" ondragleave="dragLeave(event)"></ul>
+                    <ul class="drag-item-list" id="complete-list" ondrop="dropItemTo(event)"
+                        ondragover="allowDropTo(event)" ondragenter="dragEnterOn(2)" ondragleave="dragLeave(event)">
+                    </ul>
                 </div>
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(2)">
@@ -84,8 +88,9 @@
                     <p class="title">On Hold 🛑</p>
                 </span>
                 <div id="on-hold-content">
-                    <ul class="drag-item-list" id="on-hold-list" ondrop="dropItemTo(event)" ondragover="allowDropTo(event)"
-                        ondragenter="dragEnterOn(3)" ondragleave="dragLeave(event)"></ul>
+                    <ul class="drag-item-list" id="on-hold-list" ondrop="dropItemTo(event)"
+                        ondragover="allowDropTo(event)" ondragenter="dragEnterOn(3)" ondragleave="dragLeave(event)">
+                    </ul>
                 </div>
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(3)">
@@ -101,7 +106,6 @@
             </li>
         </ul>
     </div>
-    
     <script src="./assets/scripts/app.js"></script>
     <script src="./assets/scripts/inputBoxes.js"></script>
     <script src="./assets/scripts/items.js"></script>
