@@ -1,7 +1,7 @@
 //Importing HTML Elements
 //Defining getElementById, querySelector & querySelectorAll through function for code shortening
 function getByid(param) {
-    return document.getElementById(`${param}`);
+    return document.getElementById(param);
 }
 
 function getSelector(param) {
