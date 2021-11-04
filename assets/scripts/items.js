@@ -165,7 +165,6 @@ function dropItemTo(e) {
   e.preventDefault();
   const parent = listColumns[currentColumn];
   parent.appendChild(draggedItem);
-  // parent.prepend(draggedItem);
   dragging = false;
   arraysUpdate();
 }
