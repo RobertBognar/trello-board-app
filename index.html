@@ -25,7 +25,7 @@
                     <p class="title">Backlog 📝</p>
                 </span>
                 <div id="backlog-content">
-                    <ul class="drag-item-list" id="backlog-list" ondrop="dropItemTo(event)"
+                    <ul class="drag-item-list" id="backlog-list" ondragstart="drag(event)" ondrop="dropItemTo(event)"
                         ondragover="allowDropTo(event)" ondragenter="dragEnterOn(0)" ondragleave="dragLeave(event)">
                     </ul>
                 </div>
@@ -46,7 +46,7 @@
                     <p class="title">In Progress 🔄</p>
                 </span>
                 <div id="progress-content">
-                    <ul class="drag-item-list" id="progress-list" ondrop="dropItemTo(event)"
+                    <ul class="drag-item-list" id="progress-list" ondragstart="drag(event)" ondrop="dropItemTo(event)"
                         ondragover="allowDropTo(event)" ondragenter="dragEnterOn(1)" ondragleave="dragLeave(event)">
                     </ul>
                 </div>
@@ -67,7 +67,7 @@
                     <p class="title">Completed ✔️</p>
                 </span>
                 <div id="complete-content">
-                    <ul class="drag-item-list" id="complete-list" ondrop="dropItemTo(event)"
+                    <ul class="drag-item-list" id="complete-list" ondragstart="drag(event)" ondrop="dropItemTo(event)"
                         ondragover="allowDropTo(event)" ondragenter="dragEnterOn(2)" ondragleave="dragLeave(event)">
                     </ul>
                 </div>
@@ -88,7 +88,7 @@
                     <p class="title">On Hold 🛑</p>
                 </span>
                 <div id="on-hold-content">
-                    <ul class="drag-item-list" id="on-hold-list" ondrop="dropItemTo(event)"
+                    <ul class="drag-item-list" id="on-hold-list" ondragstart="drag(event)" ondrop="dropItemTo(event)"
                         ondragover="allowDropTo(event)" ondragenter="dragEnterOn(3)" ondragleave="dragLeave(event)">
                     </ul>
                 </div>
