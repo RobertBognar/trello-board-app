@@ -11,3 +11,4 @@ function showInputBox(column) {
     itemAddContainer[column].style.display = 'none';
     addToColumn(column);
   }
+  
