@@ -9,7 +9,7 @@ function getSelector(param) {
 }
 
 function getSelectorAll(param) {
-    return document.querySelectorAll(`${param}`);
+    return document.querySelectorAll(param);
 }
 
 //Buttons Container
