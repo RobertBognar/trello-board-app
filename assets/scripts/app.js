@@ -5,7 +5,7 @@ function getByid(param) {
 }
 
 function getSelector(param) {
-    return document.querySelector(`${param}`);
+    return document.querySelector(param);
 }
 
 function getSelectorAll(param) {
