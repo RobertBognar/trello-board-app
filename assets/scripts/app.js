@@ -33,7 +33,7 @@ let loadUpdate = false;
 let backlogArray = [];
 let progressArray = [];
 let completeArray = [];
-let onHoldArray = [];backlogArray
+let onHoldArray = []; backlogArray
 let listArrays = [];
 
 //Drag & Drop Functionality

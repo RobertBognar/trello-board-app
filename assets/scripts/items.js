@@ -44,63 +44,63 @@ function createItem(columnEl, column, item, index) {
 //Creating Function To Callback in DOM Update Section For Displaying Current Or New Added Tasks
 //Creating Function To Callback in DOM Arrays Update Section
 function backlogDomUpdate() {
-    backlogListElements.textContent = '';
-    backlogArray.forEach((backlogItem, index) => {
-      createItem(backlogListElements, 0, backlogItem, index);
-    });
-    backlogArray = filterArray(backlogArray);
+  backlogListElements.textContent = '';
+  backlogArray.forEach((backlogItem, index) => {
+    createItem(backlogListElements, 0, backlogItem, index);
+  });
+  backlogArray = filterArray(backlogArray);
 }
 
 function backlogArrayUpdate() {
-    backlogArray = [];
-    for (let i = 0; i < backlogListElements.children.length; i++) {
-      backlogArray.push(backlogListElements.children[i].textContent);
-    }
+  backlogArray = [];
+  for (let i = 0; i < backlogListElements.children.length; i++) {
+    backlogArray.push(backlogListElements.children[i].textContent);
+  }
 }
 
 function progressLogDomUpdate() {
-    progressListElements.textContent = '';
-    progressArray.forEach((progressItem, index) => {
-      createItem(progressListElements, 1, progressItem, index);
-    });
-    progressArray = filterArray(progressArray);
+  progressListElements.textContent = '';
+  progressArray.forEach((progressItem, index) => {
+    createItem(progressListElements, 1, progressItem, index);
+  });
+  progressArray = filterArray(progressArray);
 }
 
 function progressLogArrayUpdate() {
-    progressArray = [];
-    for (let i = 0; i < progressListElements.children.length; i++) {
-      progressArray.push(progressListElements.children[i].textContent);
-    }
+  progressArray = [];
+  for (let i = 0; i < progressListElements.children.length; i++) {
+    progressArray.push(progressListElements.children[i].textContent);
+  }
 }
 
 function completeLogDomUpdate() {
-    completeListElements.textContent = '';
-    completeArray.forEach((completeItem, index) => {
-        createItem(completeListElements, 2, completeItem, index);
-    });
-    completeArray = filterArray(completeArray);
+  completeListElements.textContent = '';
+  completeArray.forEach((completeItem, index) => {
+    createItem(completeListElements, 2, completeItem, index);
+  });
+  completeArray = filterArray(completeArray);
 }
 
 function completeLogArrayUpdate() {
-    completeArray = [];
-    for (let i = 0; i < completeListElements.children.length; i++) {
-      completeArray.push(completeListElements.children[i].textContent);
-    }
+  completeArray = [];
+  for (let i = 0; i < completeListElements.children.length; i++) {
+    completeArray.push(completeListElements.children[i].textContent);
+  }
 }
 
 function onHoldLogDomUpdate() {
-    onHoldListElements.textContent = '';
-    onHoldArray.forEach((onHoldItem, index) => {
-        createItem(onHoldListElements, 3, onHoldItem, index);
-    });
-    onHoldArray = filterArray(onHoldArray);
+  onHoldListElements.textContent = '';
+  onHoldArray.forEach((onHoldItem, index) => {
+    createItem(onHoldListElements, 3, onHoldItem, index);
+  });
+  onHoldArray = filterArray(onHoldArray);
 }
 
 function onHoldLogArrayUpdate() {
-    onHoldArray = [];
-    for (let i = 0; i < onHoldListElements.children.length; i++) {
-      onHoldArray.push(onHoldListElements.children[i].textContent);
-    }
+  onHoldArray = [];
+  for (let i = 0; i < onHoldListElements.children.length; i++) {
+    onHoldArray.push(onHoldListElements.children[i].textContent);
+  }
 }
 
 //Updating Current DOM, Resetting HTML, Filtering Arrays, Updating LocalStorage Or Showing Current Ones
@@ -108,16 +108,16 @@ function domUpdate() {
   if (!loadUpdate) {
     fetchColumns();
   }
-    backlogDomUpdate();
-    progressLogDomUpdate();
-    completeLogDomUpdate();
-    onHoldLogDomUpdate();
+  backlogDomUpdate();
+  progressLogDomUpdate();
+  completeLogDomUpdate();
+  onHoldLogDomUpdate();
 
-    loadUpdate = true;
-    updateFetchedColumns();
+  loadUpdate = true;
+  updateFetchedColumns();
 }
 
-//Updating Items & Arrays Value
+//Updating Items & Arrays Value For New Items Added
 function updateItem(id, column) {
   const selectedArray = listArrays[column];
   const selectedColumn = listColumns[column].children;
@@ -142,11 +142,11 @@ function addToColumn(column) {
 
 //Arrays Container Updates
 function arraysUpdate() {
-    backlogArrayUpdate();
-    progressLogArrayUpdate();
-    completeLogArrayUpdate();
-    onHoldLogArrayUpdate();
-    domUpdate();
+  backlogArrayUpdate();
+  progressLogArrayUpdate();
+  completeLogArrayUpdate();
+  onHoldLogArrayUpdate();
+  domUpdate();
 }
 
 //Drag & Drop Functions Added To HTML Enabling Cross Adding & Drop & Dragging
@@ -157,6 +157,7 @@ function dragEnterOn(column) {
 
 function dragLeave(e) {
   draggedItem.style.color = 'red';
+  draggedItem.style.background = 'rgba(190, 190, 190, 0.4)';
 }
 
 function drag(e) {
