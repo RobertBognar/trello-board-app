@@ -108,6 +108,10 @@ ul {
   &:hover {
     background-color: $hoverItem;
   }
+  &:active {
+    color: $holdBackground;
+    background-color: $blue;
+  }
 }
 
 //Button Section Container
@@ -168,4 +172,12 @@ ul {
       outline: none;
     }
   }
+}
+
+.red {
+  color: $holdBackground;
+}
+
+.blue {
+  background-color: $blue;
 }

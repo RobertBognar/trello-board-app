@@ -1,22 +1,15 @@
 //Fetching Columns From LocalStorage If It Is Possible, If Not Setting Default Ones
 function fetchColumns() {
-  if (localStorage.getItem('backlogItems')) {
-    backlogArray = JSON.parse(localStorage.backlogItems);
-    progressArray = JSON.parse(localStorage.progressItems);
-    completeArray = JSON.parse(localStorage.completeItems);
-    onHoldArray = JSON.parse(localStorage.onHoldItems);
-  } else {
-    backlogArray = ['Sample1', 'Sample2'];
-    progressArray = ['Sample3', 'Sample4'];
-    completeArray = ['Sample5', 'Sample6'];
-    onHoldArray = ['Sample7', 'Sample8'];
-  }
+  backlogArray = localStorage.backlogItem ? JSON.parse(localStorage.backlogItem) : ['Sample1', 'Sample2'];
+  progressArray = localStorage.progressItem ? JSON.parse(localStorage.progressItem) : ['Sample3', 'Sample4'];
+  completeArray = localStorage.completeItem ? JSON.parse(localStorage.completeItem) : ['Sample5', 'Sample6'];
+  onHoldArray = localStorage.onHoldItem ? JSON.parse(localStorage.onHoldItem) : ['Sample7', 'Sample8'];
 }
 
+listArrays = [backlogArray, progressArray, completeArray, onHoldArray];
+const arrayNames = ['backlog', 'progress', 'complete', 'onHold'];
 //Set localStorage Arrays
 function updateFetchedColumns() {
-  listArrays = [backlogArray, progressArray, completeArray, onHoldArray];
-  const arrayNames = ['backlog', 'progress', 'complete', 'onHold'];
   arrayNames.forEach((arrayName, index) => {
     localStorage.setItem(`${arrayName}Items`, JSON.stringify(listArrays[index]));
   });
@@ -156,8 +149,7 @@ function dragEnterOn(column) {
 }
 
 function dragLeave(e) {
-  draggedItem.style.color = 'red';
-  draggedItem.style.backgroundColor = 'lightblue';
+
 }
 
 function drag(e) {

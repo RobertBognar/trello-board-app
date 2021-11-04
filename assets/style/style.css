@@ -131,6 +131,11 @@ ul {
   background-color: #ebe9e9;
 }
 
+.drag-item:active {
+  color: #DC143C;
+  background-color: #b6c7ff;
+}
+
 .add-btn {
   margin: 10px;
   padding: 5px 10px;
@@ -208,5 +213,13 @@ ul {
 
 .add-container .add-item:focus {
   outline: none;
+}
+
+.red {
+  color: #DC143C;
+}
+
+.blue {
+  background-color: #b6c7ff;
 }
 /*# sourceMappingURL=style.css.map */

@@ -21,7 +21,7 @@
             <!--Adding Show/Hide On Inputs-->
             <!--Enabling All JS Function On Each Position 0,1,2,3-->
             <li class="drag-column backlog-column">
-                <span class="header backlog">
+                <span class="header backlog" ondragover="allowDropTo(event)" ondrop="dropItemTo(event)">
                     <p class="title">Backlog 📝</p>
                 </span>
                 <div id="backlog-content">
@@ -42,7 +42,7 @@
                 </div>
             </li>
             <li class="drag-column progress-column">
-                <span class="header progress">
+                <span class="header progress" ondragover="allowDropTo(event)" ondrop="dropItemTo(event)">
                     <p class="title">In Progress 🔄</p>
                 </span>
                 <div id="progress-content">
@@ -63,7 +63,7 @@
                 </div>
             </li>
             <li class="drag-column complete-column">
-                <span class="header completed">
+                <span class="header completed" ondragover="allowDropTo(event)" ondrop="dropItemTo(event)">
                     <p class="title">Completed ✔️</p>
                 </span>
                 <div id="complete-content">
@@ -84,7 +84,7 @@
                 </div>
             </li>
             <li class="drag-column on-hold-column">
-                <span class="header hold">
+                <span class="header hold" ondragover="allowDropTo(event)" ondrop="dropItemTo(event)">
                     <p class="title">On Hold 🛑</p>
                 </span>
                 <div id="on-hold-content">
