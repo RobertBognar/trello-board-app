@@ -6,10 +6,10 @@ function fetchColumns() {
   onHoldArray = localStorage.onHoldItem ? JSON.parse(localStorage.onHoldItem) : ['Sample7', 'Sample8'];
 }
 
-listArrays = [backlogArray, progressArray, completeArray, onHoldArray];
-const arrayNames = ['backlog', 'progress', 'complete', 'onHold'];
 //Set localStorage Arrays
 function updateFetchedColumns() {
+  listArrays = [backlogArray, progressArray, completeArray, onHoldArray];
+  const arrayNames = ['backlog', 'progress', 'complete', 'onHold'];
   arrayNames.forEach((arrayName, index) => {
     localStorage.setItem(`${arrayName}Items`, JSON.stringify(listArrays[index]));
   });
