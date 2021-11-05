@@ -1,0 +1,183 @@
+@import 'variables';
+
+@mixin breakpoint {
+  @media screen and (max-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+//Global
+html {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: $backgroundColor;
+    margin: 0;
+    overflow-y: hidden;
+    font-family: $family;
+    @include breakpoint() {
+      overflow-y: auto;
+    }
+}
+
+.name {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-align: center;
+  font-weight: $firstWeight;
+}
+
+//Container Section
+.trello-container {
+  margin: 20px;
+  @include breakpoint() {
+    margin: 0;
+  }
+}
+
+.drag-container {
+  display: flex;
+  align-items: flex-start;
+  @include breakpoint() {
+    display: block;
+  }
+}
+
+.drag-column {
+  position: relative;
+  flex: 1;
+  margin: 0 12px;
+  border-radius: $common;
+  background-color: $dragColumnBackground;
+  overflow-x: hidden;
+  @include breakpoint() {
+    margin: $common;
+  }
+}
+
+//Header Log Section
+.header {
+  display: flex;
+  justify-content: center;
+  border-radius: $common;
+  margin: $common;
+  &.backlog {
+    background-color: $backlogBackground;
+  }
+  &.progress {
+    background-color: $progressBackground;
+  }
+  &.completed {
+    background-color: $completedBackground;
+  }
+  &.hold {
+    background-color: $holdBackground;
+  }
+  .title {
+    text-align: center;
+    font-size: 32px;
+  }
+}
+
+//Items Container
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.drag-item {
+  margin: $common;
+  padding: $common;
+  height: fit-content;
+  background-color: $dragItemBackground;
+  border-radius: $common;
+  line-height: 24px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  &-list {
+    min-height: 120px;
+  }
+  &:focus {
+    outline: none;
+    background-color: $basicWhite;
+    color: $basicBlack;
+  }
+  &:hover {
+    background-color: $hoverItem;
+  }
+  &:active {
+    color: $holdBackground;
+    background-color: $blue;
+  }
+}
+
+//Button Section Container
+
+.add-btn {
+  margin: $common;
+  padding: $small $common;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: $small;
+  transition: all 0.1s ease-in;
+  user-select: none;
+  background-color: $dragItemBackground;
+  &-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  &:hover {
+    background-color: $hoverItem;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.save {
+  display: none;
+  background-color: $dragItemBackground;
+  &:hover {
+    background-color: $hoverItem;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+//Add Content Container
+
+.add-container {
+  margin: $common;
+  padding: $small $common;
+  border-radius: $common;
+  min-height: 100px;
+  display: none;
+  .add-item {
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    background-color: $basicWhite;
+    border-radius: $common;
+    margin: $small auto;
+    resize: none;
+    color: $basicBlack;
+    padding: $common;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.red {
+  color: $holdBackground;
+}
+
+.blue {
+  background-color: $blue;
+}
