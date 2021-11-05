@@ -164,7 +164,12 @@ function allowDropTo(e) {
 function dropItemTo(e) {
   e.preventDefault();
   const parent = listColumns[currentColumn];
-  parent.appendChild(draggedItem);
+  // parent.appendChild(draggedItem);
+  if (parent !== e.target) {
+    parent.prepend(draggedItem);
+  } else {
+    parent.appendChild(draggedItem);
+  }
   dragging = false;
   arraysUpdate();
 }
